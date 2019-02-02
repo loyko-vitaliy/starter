@@ -1,0 +1,16 @@
+{
+  "name": "spencer/wonder-house",
+  "config": {
+    "vendor-dir": "api/vendor"
+  },
+  "authors": [
+    {
+      "name": "Vitaliy Loyko",
+      "email": "vitaliy.87@icloud.com"
+    }
+  ],
+  "require": {
+    "swiftmailer/swiftmailer": "^6.0",
+    "twig/twig": "^2.0"
+  }
+}

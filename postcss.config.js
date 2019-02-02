@@ -5,7 +5,7 @@ const sortCSSmq = require('sort-css-media-queries')
 const plugins = [mqpacker({ sort: sortCSSmq.desktopFirst })]
 
 module.exports = ({ options }) => {
-  const mode = options.env
+  const mode = options.mode
 
   if (mode === 'production') {
     plugins.push(autoprefixer())
