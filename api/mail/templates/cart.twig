@@ -1,6 +1,6 @@
 {% extends 'base.twig' %}
 
-{% block title %}Request from Wonder House{% endblock %}
+{% block title %}Заявка с сайта{% endblock %}
 
 {% block body %}
  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
@@ -10,7 +10,7 @@
           <div class="content">
 
             <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader">Новая заявка с Wonder House</span>
+            <span class="preheader">Новая заявка</span>
             <table role="presentation" class="main">
 
               <!-- START MAIN CONTENT AREA -->
@@ -19,8 +19,7 @@
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>Привет Роберт!</p>
-                        <p>{{ customer.name }} только что сделал заказ.</p>
+                        <p>Привет!</p>
                          <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -33,33 +32,17 @@
                                     </tr>
                                   <thead>
                                   <tbody>
-                                    {% for product in products %}
                                     <tr>
-                                      <td style="text-align: left;">{{ product.title }}</td>
-                                      <td>{{ product.price }} ₽</td>
-                                    </tr>
-                                    {% endfor %}
-                                    <tr>
-                                      <td style="text-align: left;">Доставка: </td>
-                                      <td>{{ shipment }} ₽</td>
+                                      <td style="text-align: left;">Товар 1</td>
+                                      <td>1200 ₽</td>
                                     </tr>
                                   </tbody>
-                                  <tfoot>
-                                    <tr>
-                                      <td style="text-align: right;">Итого с учетом доставки:</td>
-                                      <td>{{ total }} ₽</td>
-                                    </tr>
-                                  </tfoot>
                                 </table>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                        <p><b>Телефон:</b> {{ customer.phone }}.</p>
-                        <p><b>Регион:</b> {{ customer.region }}.</p>
-                        <p><b>Адрес:</b> {{ customer.address }}.</p>
-                        <p><b>Доставка:</b> {{ customer.shipmentType }}.</p>
-                        <p><b>Сообщение:</b> {{ customer.message }}</p>
+                        <p><b>Дополнительное поле:</b> {{ field }}.</p>
                       </td>
                     </tr>
                   </table>
@@ -74,7 +57,7 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span class="apple-link">Wonder House</span>
+                    <span class="apple-link">Site</span>
                   </td>
                 </tr>
               </table>
