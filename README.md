@@ -91,11 +91,11 @@ src
 Предназначена для написания frontend приложения.
 Страницы из папки pages собираются из блоков в папке blocks через mixin b:
 
-пример 1: добавление блока "main-nav"  
+Пример 1: добавление блока "main-nav"  
 `+b.main-nav`
 
-пример 2: добавление блока "main-nav" с дополнительными классами "main-nav--fixed" и "header\_\_nav"
-`+b.main-nav.main-nav--fixed.header**nav`
+Пример 2: добавление блока "main-nav" с дополнительными классами "main-nav--fixed" и "header\_\_nav"  
+`+b.main-nav.main-nav--fixed.header__nav`
 
 #### Создание блока:
 
@@ -104,25 +104,27 @@ src
 Например создание блока c именем "slider" -  
 `npm run cb -- slider`
 
+Контент из файла data.json блока доступен в шаблоне через переменную data.
+
 #### Добавление изображений в блок:
 
-`img(src=require('../blocks/{имя блока}/img/{имя изображения}.jpg|png|webp|svg|gif') alt='')`
+- `img(src=require('{имя блока}/img/{имя изображения}.jpg|png|webp|svg|gif') alt='')`
 
 Например добавление изображения "burger.jpg" в блок "main-nav" -  
-`img(src=require('../blocks/main-nav/img/burger.jpg') alt='burger')`
+`img(src=require('main-nav/img/burger.jpg') alt='burger')`
 
 #### Добавление svg иконки в блок:
 
-`svg`  
-&nbsp;&nbsp;&nbsp;&nbsp;`use(xlink:href=require('../blocks/{имя блока}/img/{имя иконки}.svg').symbol)`
+- `svg`  
+  &nbsp;&nbsp;&nbsp;&nbsp;`use(xlink:href=require('{имя блока}/img/{имя иконки}.svg').symbol)`
 
 Например добавление svg иконки "phone.svg" в блок "main-nav" -  
 `svg`  
-&nbsp;&nbsp;&nbsp;&nbsp;`use(xlink:href=require('../blocks/main-nav/img/phone.svg').symbol)`
+&nbsp;&nbsp;&nbsp;&nbsp;`use(xlink:href=require('main-nav/img/phone.svg').symbol)`
 
 #### Добавление изображений в файл стилей блока:
 
-`background-image: url('img/{имя изображения}.jpg|png|webp|svg|gif')`
+- `background-image: url('img/{имя изображения}.jpg|png|webp|svg|gif')`
 
 Например добавление изображения "header-bg.jpg" в блок "main-nav"-
 
@@ -130,20 +132,20 @@ src
 
 #### Добавление svg иконки в файл стилей блока:
 
-`background-image: url('img/{name}.svg')`
+- `background-image: url('img/{name}.svg')`
 
 Например добавление svg иконки "phone.svg" в блок "main-nav"-  
 `background-image: url('img/phone.svg')`
 
 #### Retina для фоновых изображений
 
-`@include retina2x {...}` - @2x
+- `@include retina2x {...}` - @2x
 
-`@include retina3x {...}` - @3x
+- `@include retina3x {...}` - @3x
 
 #### Retina c bootstrap media queries
 
-`@include media-breakpoint-down({breakpoint}) { @include retina2x {...} }`
+- `@include media-breakpoint-down({breakpoint}) { @include retina2x {...} }`
 
 Например изменение двойной ретины на брейкпоинте "lg" -  
 `@include media-breakpoint-down(lg) { @include retina2x {...} }`

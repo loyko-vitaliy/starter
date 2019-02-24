@@ -1,5 +1,4 @@
-import path from 'path'
-
 export default {
-  extensions: ['.ts', '.tsx', '.js']
+  extensions: ['.ts', '.tsx', '.js'],
+  modules: ['node_modules', './src/blocks']
 }
