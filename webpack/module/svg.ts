@@ -1,4 +1,14 @@
+import SvgStorePlugin from 'external-svg-sprite-loader'
+
 export default {
-  loader: 'svg-sprite-loader',
-  test: /\.svg$/
+  test: /\.svg$/,
+  use: [
+    {
+      loader: SvgStorePlugin.loader,
+      options: {
+        iconName: 'icon-[name]',
+        name: 'assets/svg/sprite.svg'
+      }
+    }
+  ]
 }

@@ -1,6 +1,7 @@
 import PreloadWebpackPlugin from 'preload-webpack-plugin'
 
 export default new PreloadWebpackPlugin({
-  include: 'initial',
+  fileWhitelist: [/\.woff2$/, /\.js$/],
+  include: 'allAssets',
   rel: 'preload'
 })

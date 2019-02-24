@@ -4,6 +4,9 @@ export default {
   use: [
     {
       loader: 'ts-loader'
+    },
+    {
+      loader: 'webpack-import-glob'
     }
   ]
 }

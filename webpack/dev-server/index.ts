@@ -18,6 +18,8 @@ export default {
   },
   stats: 'errors-only',
   before(app: any, server: any) {
-    chokidar.watch(['./src/pug/**/*.pug']).on('all', () => server.sockWrite(server.sockets, 'content-changed'))
+    chokidar
+      .watch(['./src/pages/**/*.pug', './src/blocks/**/*.pug', './src/blocks/*/data.json'])
+      .on('all', () => server.sockWrite(server.sockets, 'content-changed'))
   }
 }

@@ -22,9 +22,13 @@ export default (mode: string) => ({
       }
     },
     {
+      loader: 'resolve-url-loader'
+    },
+    {
       loader: 'sass-loader',
       options: {
         importer: globImporter(),
+        includePaths: ['./node_modules/'],
         sourceMap: true
       }
     }

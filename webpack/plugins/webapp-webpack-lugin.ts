@@ -6,16 +6,16 @@ const favicon = path.resolve(__dirname, '../../src/favicon/favicon.png')
 export default new WebappWebpackPlugin({
   favicons: {
     icons: {
-      android: true,
-      appleIcon: true,
-      appleStartup: true,
-      coast: true,
+      android: false,
+      appleIcon: false,
+      appleStartup: false,
+      coast: false,
       favicons: true,
-      firefox: true,
-      opengraph: true,
-      twitter: true,
-      windows: true,
-      yandex: true
+      firefox: false,
+      opengraph: false,
+      twitter: false,
+      windows: false,
+      yandex: false
     }
   },
   inject: true,

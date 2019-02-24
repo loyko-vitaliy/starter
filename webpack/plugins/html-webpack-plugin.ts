@@ -3,7 +3,7 @@ import path from 'path'
 
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 
-const TEMPLATES_FOLDER = '../../src/pug'
+const TEMPLATES_FOLDER = '../../src/pages'
 
 export default () => {
   const templatesDir = fs.readdirSync(path.resolve(__dirname, TEMPLATES_FOLDER))
@@ -17,7 +17,7 @@ export default () => {
 
     return new HTMLWebpackPlugin({
       filename: `${name}.html`,
-      inject: 'body',
+      inject: true,
       template: path.resolve(__dirname, `${TEMPLATES_FOLDER}/${name}.${extension}`)
     })
   })

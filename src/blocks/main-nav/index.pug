@@ -1,0 +1,8 @@
+mixin main-nav(data)
+  nav(class=attributes.class)
+    ul.main-nav__list
+      each item in data
+        li.main-nav__item
+          a.main-nav__link(href=item.href) #{item.title} 
+          
+      

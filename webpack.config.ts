@@ -10,15 +10,15 @@ import resolve from './webpack/resolve'
 import stats from './webpack/stats'
 
 const config: IWebpackConfig = (_, { mode }) => ({
-  entry,
-  output: output(mode),
-  devtool: devtool(mode),
-  optimization,
   devServer,
-  stats,
-  resolve,
+  devtool: devtool(mode),
+  entry,
   module: module(mode),
-  plugins: plugins(mode)
+  optimization,
+  output: output(mode),
+  plugins: plugins(mode),
+  resolve,
+  stats
 })
 
 export default config

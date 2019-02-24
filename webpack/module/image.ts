@@ -1,9 +1,12 @@
 export default {
-  test: /\.(png|jpg|gif)$/,
+  test: /\.(png|jpg|gif|webp)$/,
   use: [
     {
       loader: 'file-loader',
-      options: { name: 'assets/img/[folder]/[name].[ext]' }
+      options: {
+        name: 'assets/img/[1]/[name].[ext]',
+        regExp: /blocks\/([a-z0-9-_]+)\//
+      }
     },
     {
       loader: 'image-webpack-loader',
@@ -18,6 +21,9 @@ export default {
         pngquant: {
           quality: 60,
           speed: 4
+        },
+        webp: {
+          quality: 75
         }
       }
     }
